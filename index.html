@@ -18,6 +18,45 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="container">
+    <div class="js-menu-container">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <nav class="drawer-main-navigation">
+        <ul class="drawer-nav-links">
+          <li class="link-one">
+            <a href="index.html" class="active studio-current">Studio</a>
+          </li>
+          <li class="link-two" ><a href="portfolio.html" class="active ">Portfolio</a></li>
+          <li class="link-three" ><a href="" class="not-active">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="drawer-contacts">
+        <a href="mailto:info@devstudio.com" class="email hover-icon">  
+          info@devstudio.com</a>
+        <a href="tel:+1 212-772-4150" class="phone-number hover-icon-2">+1 212-772-4150</a>
+      </div>  
+      <div class="drawer-social-links">
+          <a href="https://instagram.com"  aria-label="Instagram">Instagram</a>
+            <a href="https://twitter.com"  aria-label="Twitter">Twitter</a>
+            <a href="https://facebook.com" aria-label="Facebook">Facebook</a>
+            <a href="https://linkedin.com"  aria-label="Linkedin">Linkedin</a>
+      </div>  
+    </div>
+
+
     <header class="global-header">
       <div class="logo-header">
         <a href="index.html" class="logo"><span class="logo-web">Web</span><span class="logo-studio">Studio</span></a>
@@ -43,6 +82,17 @@
         <a href="tel:+1 212-772-4150" class="phone-number hover-icon-2">+1 212-772-4150</a>
         </div>  
         <hr />
+      <div>
+         <button
+          class="menu-icon-phone js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icon">
+                <use href="./icons/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        
+      </div>
     </header>
     <main class="main-section">
       <div class="hero-section hero-container">
@@ -427,6 +477,7 @@
 
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -13,7 +13,7 @@
 body {
   color: #212121;
   font-family: "Roboto", sans-serif;
-  width: 1600px;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   height: auto;
@@ -49,6 +49,23 @@ svg,
   line-height: normal;
   letter-spacing: 0.28px;
   display: flex;
+}
+
+.global-header .menu-icon-phone {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  color: #212121;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .info-footer .logo-web,
@@ -93,17 +110,6 @@ ul {
   list-style-type: none;
 }
 
-.button .main-navigation {
-  background: #fff;
-  color: var(--titles-color);
-  font-size: 14px;
-  font-family: var(--text-font-family);
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.28px;
-}
-
 .link-one .active,
 .link-two .active,
 .link-three .not-active {
@@ -126,6 +132,7 @@ ul {
     url("../images/main-background.png");
   height: 600px;
   background-color: rgba(47, 48, 58, 0.4);
+  width: 100%;
 }
 .hero-heading {
   color: #fff;
@@ -138,8 +145,14 @@ ul {
   letter-spacing: 2.64px;
   text-transform: uppercase;
   width: 696px;
-  margin-left: 452px;
-  margin-right: 452px;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 30px;
 }
 
 .points-title {
@@ -255,13 +268,7 @@ ul {
 .phone-adress {
   color: rgba(255, 255, 255, 0.6);
 }
-.container {
-  width: 1600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid #ececec;
-}
+
 .global-container {
   display: flex;
   box-sizing: content-box;
@@ -276,21 +283,15 @@ ul {
   display: flex;
   box-sizing: content-box;
   align-items: center;
-  width: 145px;
-  height: 31px;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-left: 215px;
+  width: 100%;
+  height: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 15px;
   margin-right: 0;
 }
 .main-navigation {
-  display: flex;
-  box-sizing: content-box;
-  justify-content: space-between;
-  width: 259px;
-  height: 80px;
-  margin-left: 93px;
-  margin-right: 0;
+  display: none;
 }
 .nav-links {
   display: flex;
@@ -300,38 +301,31 @@ ul {
 }
 .link-one {
   display: flex;
-  width: 42px;
-  height: 16px;
+  width: 100%;
+  height: 100%;
   color: #212121;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14em;
 }
 .link-two {
-  width: 58px;
-  height: 16px;
+  width: 100%;
+  height: 100%;
   color: #212121;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14em;
 }
 .link-three {
-  width: 59px;
-  height: 16px;
+  width: 100%;
+  height: 100%;
   color: #212121;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14em;
 }
 .navigation-contacts {
-  display: flex;
-  justify-content: center;
-  box-sizing: content-box;
-  flex-direction: row;
-  align-items: center;
-  row-gap: 40px;
-  margin-left: 330px;
-  width: 100%;
+  display: none;
 }
 .email {
   display: flex;
@@ -353,7 +347,6 @@ ul {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-  margin-right: 215px;
   letter-spacing: 0.28px;
   padding-left: 10px;
   transition: color var(--transition);
@@ -405,29 +398,10 @@ ul {
   row-gap: 30px;
   flex-wrap: wrap;
   box-sizing: content-box;
-  width: 1176px;
+  width: 100%;
+  height: 100%;
 }
-.image-container {
-  display: flex;
-  box-sizing: content-box;
-  justify-content: space-between;
-  flex-direction: column;
-  flex-basis: calc((100%-30px) / 3);
-  height: 404px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #eee;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
-  background-color: #fff;
-}
-.card-one,
-.card-two,
-.card-three,
-.card-four {
-  box-sizing: content-box;
-  width: 370px;
-  height: 294px;
-}
+
 .image-title {
   display: flex;
   box-sizing: content-box;
@@ -442,18 +416,18 @@ ul {
   display: flex;
   background-color: #2f303a;
   width: 100%;
-  height: 251px;
+  height: 100%;
   flex-shrink: 0;
-  justify-content: flex-start;
-  padding-left: 215px;
+  justify-content: center;
+  padding-left: auto;
   flex-direction: row;
+  padding-bottom: 60px;
 }
 .logo-footer {
   display: flex;
-  width: 145px;
-  height: 31px;
-  margin-bottom: 28px;
-  margin-top: 60px;
+  width: 100%;
+  padding-bottom: 28px;
+  padding-top: 60px;
 }
 
 .main-section {
@@ -472,22 +446,10 @@ ul {
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  height: 600px;
+  height: 100%;
   margin-bottom: 94px;
 }
-.hero-heading {
-  display: flex;
-  box-sizing: border-box;
-  width: 696px;
-  height: 120px;
-  margin-right: auto;
-  margin-left: auto;
-  color: #ffffff;
-  font-size: 44px;
-  text-align: center;
-  margin-top: 200px;
-  margin-bottom: 30px;
-}
+
 .request-our-service-btn {
   display: flex;
   box-sizing: content-box;
@@ -506,15 +468,12 @@ ul {
 }
 .first-section ul {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 1170px;
-  height: 101px;
-  flex-shrink: 0;
-  row-gap: 30px;
-  margin-left: 215px;
-  margin-right: 215px;
-  margin-bottom: 94px;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
 }
 .strong-points {
   display: flex;
@@ -605,13 +564,12 @@ ul {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 0;
-  display: flex;
+  padding-bottom: 30px;
   box-sizing: border-box;
   border-radius: 0px 0px 4px 4px;
   background: #fff;
-  width: 270px;
-  height: 428px;
+  width: 100%;
+  height: 100%;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
@@ -619,14 +577,13 @@ ul {
   display: flex;
   gap: 30px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .full-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 215px;
-  padding-right: 215px;
   flex-direction: column;
 }
 
@@ -760,8 +717,6 @@ ul {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1.08px;
-  display: flex;
-  justify-content: center;
   padding-bottom: 50px;
 }
 
@@ -796,8 +751,8 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 215px;
-  padding-right: 215px;
+  padding-left: auto;
+  padding-right: auto;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -1179,4 +1134,79 @@ input[type="checkbox"]:checked ~ .checkbox {
 .navigation-contacts:hover .navigation-contacts-icon,
 .navigation-contacts:focus .navigation-contacts-icon {
   color: #2196f3;
+}
+
+.js-menu-container {
+  display: none;
+}
+
+.js-menu-container .is-open {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .button .main-navigation {
+    background: #fff;
+    color: var(--titles-color);
+    font-size: 14px;
+    font-family: var(--text-font-family);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.28px;
+  }
+  .main-navigation {
+    display: flex;
+    box-sizing: content-box;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 93px;
+    margin-right: 0;
+  }
+  .navigation-contacts {
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 40px;
+    margin-left: auto;
+    width: 100%;
+  }
+  .logo-header {
+    display: flex;
+    box-sizing: content-box;
+    align-items: center;
+    width: 134px;
+    height: 28px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-left: 15px;
+    margin-right: 0;
+  }
+  .global-header .menu-icon-phone {
+    display: none;
+  }
+  .js-menu-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .logo-header {
+    display: flex;
+    box-sizing: content-box;
+    align-items: center;
+    width: 145px;
+    height: 31px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-left: 215px;
+    margin-right: 0;
+  }
+  .global-header .menu-icon-phone {
+    display: none;
+  }
 }
