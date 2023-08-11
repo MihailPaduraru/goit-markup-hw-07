@@ -206,12 +206,24 @@
         </div>
         <ul class="all-employers">
           <li class="employers"> <div class="member-one">
-          <img
-            src="./images/christopher_walker.jpg"
-            alt="Christopher Walker"
-            
-            class="image-staff"
-          />
+          <picture>
+             <!-- Desktop -->
+
+              <source media="(min-width:1158px)"
+                srcset="images/christopher-walker-d.jpg , images/christopher-walker-d-2x">
+
+              <!-- Tablet -->
+
+              <source media="(min-width:768px)"
+                srcset="images/christopher_walker-t.jpg, images/christopher_walker-t-2x.jpg">
+
+              <!-- Mobile -->
+              <source srcset="images/christopher-walker-m.jpg, images/christopher-walker-m-2x.jpg">
+              <img
+              src="./images/christopher_walker.jpg"
+              alt="Christopher Walker"
+              class="image-staff"/><br />
+          </picture>
           <span class="person-name-one person-name" ><b>Christopher Walker</b></span>
           <span class="job-title">Product designer</span>
           <div class="icons-list">
