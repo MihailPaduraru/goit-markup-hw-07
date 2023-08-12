@@ -14,6 +14,49 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <div class="js-menu-container">
+      <button class="menu-toggle js-close-menu">
+        <svg>
+          <use href="./icons/symbol-defs.svg#icon-close-menu"></use>
+        </svg>
+      </button>
+      <nav class="drawer-main-navigation">
+        <ul class="drawer-nav-links">
+          <li>
+            <a href="index.html" class="active studio-current drawer-link"
+              >Studio</a
+            >
+          </li>
+          <li>
+            <a href="portfolio.html" class="active drawer-link">Portfolio</a>
+          </li>
+          <li><a href="" class="not-active drawer-link">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="drawer-contacts">
+        <a href="tel:+1 212-772-4150" class="phone-number hover-icon-2"
+          >+1 212-772-4150</a
+        >
+        <a href="mailto:info@devstudio.com" class="email hover-icon">
+          info@devstudio.com</a
+        >
+      </div>
+      <div class="drawer-social-links">
+        <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
+        <svg>
+          <use href="./icons/symbol-defs.svg#icon-line-1"></use>
+        </svg>
+        <a href="https://twitter.com" aria-label="Twitter">Twitter</a>
+        <svg>
+          <use href="./icons/symbol-defs.svg#icon-line-1"></use>
+        </svg>
+        <a href="https://facebook.com" aria-label="Facebook">Facebook</a>
+        <svg>
+          <use href="./icons/symbol-defs.svg#icon-line-1"></use>
+        </svg>
+        <a href="https://linkedin.com" aria-label="Linkedin">Linkedin</a>
+      </div>
+    </div>
     <header class="global-header">
       <div class="logo-header">
         <a href="index.html" class="logo"
@@ -44,6 +87,17 @@
           <use href="./icons/symbol-defs.svg#icon-smartphone"></use>
         </svg>
         <a href="tel:+1 212-772-4150" class="phone-number">+1 212-772-4150</a>
+      </div>
+      <div>
+        <button
+          class="menu-button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icon">
+            <use href="./icons/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main class="main-container">
@@ -293,5 +347,12 @@
         </form>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

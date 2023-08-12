@@ -117,11 +117,9 @@ ul {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.5)
     ),
-    url("../images/main-background.png");
-  height: 600px;
-  background-color: rgba(47, 48, 58, 0.4);
-  width: 100%;
+    url("../images/header-background-m.jpg");
 }
+
 .hero-heading {
   color: #fff;
   text-align: center;
@@ -248,6 +246,7 @@ ul {
   display: flex;
   gap: 12px;
   flex-direction: column;
+  align-items: center;
 }
 .contact-details .email-adress,
 .phone-adress {
@@ -414,6 +413,7 @@ ul {
   width: 100%;
   padding-bottom: 28px;
   padding-top: 60px;
+  justify-content: center;
 }
 
 .main-section {
@@ -457,8 +457,11 @@ ul {
 .strong-points {
   display: flex;
   flex-direction: column;
-  display: flex;
   flex-shrink: 0;
+}
+.first-section li {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .points-title {
   display: flex;
@@ -474,7 +477,6 @@ ul {
 .points-describe {
   display: flex;
   box-sizing: content-box;
-  width: 450px;
   height: 75px;
   flex-direction: column;
   flex-shrink: 0;
@@ -523,13 +525,6 @@ ul {
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.member-one img,
-.member-two img,
-.member-three img,
-.member-four img {
-  width: 450px;
-  height: 460px;
-}
 .all-employers {
   display: flex;
   gap: 30px;
@@ -658,7 +653,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 450px;
   height: 120px;
   border-radius: 4px;
   background: #f5f4fa;
@@ -747,8 +741,8 @@ ul {
   background-color: #fff;
   margin: 0 auto;
   position: relative;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   flex-shrink: 0;
   border-radius: 4px;
   background: #fff;
@@ -901,7 +895,8 @@ ul {
   line-height: normal;
   letter-spacing: 0.6px;
   padding-top: 40px;
-  padding-left: 41px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-bottom: 12px;
 }
 
@@ -913,10 +908,10 @@ ul {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.12px;
-  padding-left: 41px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .form-modal input {
-  width: 448px;
   height: 40px;
   flex-shrink: 0;
   border-radius: 4px;
@@ -924,18 +919,19 @@ ul {
   padding-left: 42px;
   padding-top: 12px;
   padding-bottom: 12px;
-  margin-left: 41px;
+  margin-left: 40px;
+  margin-right: 40px;
   margin-bottom: 10px;
   transition: color var(--transition);
 }
 .form-modal textarea {
-  width: 448px;
   height: 120px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 12px;
-  margin-left: 41px;
+  margin-left: 40px;
+  margin-right: 40px;
   margin-bottom: 12px;
 }
 textarea[placeholder] {
@@ -950,7 +946,7 @@ textarea[placeholder] {
 .terms-info {
   color: #757575;
   font-family: var(--text-font-family);
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 171.429% */
@@ -959,13 +955,14 @@ textarea[placeholder] {
 .terms-and-conditions {
   color: #2196f3;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.42px;
   text-decoration-line: underline;
 }
+
 .submit-button {
   color: #fff;
   text-align: center;
@@ -1018,7 +1015,6 @@ input[type="checkbox"]:checked ~ .checkbox {
 }
 .subscribe-form {
   display: inline-block;
-  padding-left: 93px;
   padding-top: 72px;
 }
 .subscribe-form label {
@@ -1031,7 +1027,7 @@ input[type="checkbox"]:checked ~ .checkbox {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: none;
 }
 .btn-subscribe-icon {
   width: 24px;
@@ -1064,7 +1060,7 @@ input[type="checkbox"]:checked ~ .checkbox {
   cursor: pointer;
 }
 .subscribe-form .email-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   flex-shrink: 0;
   border-radius: 4px;
@@ -1081,7 +1077,7 @@ input[type="checkbox"]:checked ~ .checkbox {
   letter-spacing: 0.48px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 10px;
+  margin: 0;
 }
 
 .navigation-contacts:hover .email,
@@ -1224,6 +1220,23 @@ input[type="checkbox"]:checked ~ .checkbox {
 .services {
   display: none;
 }
+.subscribe-form > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .hero-section {
+    background-image: url("images/header-background-m.jpg");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: url("images/header-background-m-2x.jpg");
+  }
+}
 
 @media screen and (min-width: 768px) {
   .button .main-navigation {
@@ -1278,6 +1291,51 @@ input[type="checkbox"]:checked ~ .checkbox {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+  }
+  .modal-content {
+    width: 528px;
+    height: 581px;
+  }
+  .terms-info,
+  .terms-and-conditions {
+    font-size: 12px;
+  }
+  .logo-footer {
+    display: flex;
+    width: 100%;
+    padding-bottom: 28px;
+    padding-top: 60px;
+    justify-content: center;
+  }
+  .hero-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../images/header-background-t.jpg");
+    background-color: rgba(47, 48, 58, 0.4);
+    width: 100%;
+  }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .hero-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("/images/header-background-t.jpg");
+    }
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("/images/header-background-t-2x.jpg");
+    }
   }
 }
 
@@ -1503,5 +1561,79 @@ input[type="checkbox"]:checked ~ .checkbox {
     padding-left: 94px;
     flex-direction: column;
     padding-top: 72px;
+  }
+  .modal-content {
+    width: 528px;
+    height: 581px;
+  }
+  .terms-info,
+  .terms-and-conditions {
+    font-size: 14px;
+  }
+  .logo-footer {
+    display: flex;
+    width: 100%;
+    padding-bottom: 28px;
+    padding-top: 60px;
+    justify-content: flex-start;
+  }
+  .info-footer,
+  .contact-details {
+    align-items: flex-start;
+  }
+  .subscribe-form > form {
+    display: block;
+  }
+  .subscribe-form {
+    display: inline-block;
+    padding-left: 93px;
+    padding-top: 72px;
+  }
+  .subscribe-form label {
+    color: #fff;
+    font-family: var(--text-font-family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .subscribe-form .email-input {
+    width: 358px;
+    margin-right: 10px;
+  }
+
+  .hero-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../images/header-background-d.png ");
+    background-color: rgba(47, 48, 58, 0.4);
+    width: 100%;
+  }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .hero-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("../images/header-background-d.png");
+    }
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("../images/header-background-d-2x.jpg");
+    }
   }
 }
