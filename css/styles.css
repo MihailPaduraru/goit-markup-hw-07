@@ -51,11 +51,6 @@ svg,
   display: flex;
 }
 
-.menu-icon {
-  width: 40px;
-  height: 40px;
-}
-
 .info-footer .logo-web,
 .logo-header .logo-web {
   color: #2196f3;
@@ -75,7 +70,6 @@ svg,
   line-height: normal;
   letter-spacing: 0.78px;
 }
-
 .info-footer .logo-studio {
   color: #fff;
   font-family: var(--logo-font);
@@ -85,15 +79,6 @@ svg,
   line-height: normal;
   letter-spacing: 0.78px;
 }
-
-h1,
-h3,
-h5,
-h6 {
-  font-weight: 700;
-  font-family: var(--heading-font-family);
-}
-
 ul {
   list-style-type: none;
 }
@@ -109,15 +94,6 @@ ul {
   line-height: normal;
   letter-spacing: 0.28px;
   transition: color var(--transition);
-}
-
-.hero-section {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url("../images/header-background-m.jpg");
 }
 
 .hero-heading {
@@ -238,7 +214,7 @@ ul {
   background: #2f303a;
   color: #fff;
   font-size: 14px;
-  font-family: Roboto;
+  font-family: var(--text-font-family);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -247,10 +223,9 @@ ul {
   gap: 12px;
   flex-direction: column;
   align-items: center;
-}
-.contact-details .email-adress,
-.phone-adress {
-  color: rgba(255, 255, 255, 0.6);
+  padding-bottom: 60px;
+  width: 100%;
+  height: 100%;
 }
 
 .global-container {
@@ -283,27 +258,13 @@ ul {
   justify-content: space-between;
   column-gap: 50px;
 }
-.link-one {
+.link-one,
+.link-two,
+.link-three {
   display: flex;
   width: 100%;
   height: 100%;
-  color: #212121;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14em;
-}
-.link-two {
-  width: 100%;
-  height: 100%;
-  color: #212121;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14em;
-}
-.link-three {
-  width: 100%;
-  height: 100%;
-  color: #212121;
+  color: var(--titles-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14em;
@@ -396,18 +357,6 @@ ul {
   padding-left: 24px;
 }
 
-.info-footer {
-  display: flex;
-  background-color: #2f303a;
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  justify-content: center;
-  padding-left: auto;
-  flex-direction: column;
-  padding-bottom: 60px;
-  align-items: center;
-}
 .logo-footer {
   display: flex;
   width: 100%;
@@ -735,14 +684,18 @@ ul {
   align-items: center;
   transition: 250ms linear;
   background: rgba(0, 0, 0, 0.2);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 94px;
+  padding-top: 93px;
 }
 
 .modal-content {
   background-color: #fff;
   margin: 0 auto;
   position: relative;
-  width: 450px;
-  height: 609px;
+  width: 100%;
+  height: 100%;
   flex-shrink: 0;
   border-radius: 4px;
   background: #fff;
@@ -1016,6 +969,10 @@ input[type="checkbox"]:checked ~ .checkbox {
 .subscribe-form {
   display: inline-block;
   padding-top: 72px;
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .subscribe-form label {
   color: #fff;
@@ -1060,7 +1017,7 @@ input[type="checkbox"]:checked ~ .checkbox {
   cursor: pointer;
 }
 .subscribe-form .email-input {
-  width: 450px;
+  width: 100%;
   height: 50px;
   flex-shrink: 0;
   border-radius: 4px;
@@ -1103,6 +1060,11 @@ input[type="checkbox"]:checked ~ .checkbox {
   cursor: pointer;
   display: flex;
 }
+.menu-icon {
+  width: 40px;
+  height: 40px;
+}
+
 .global-header .menu-icon:focus,
 .global-header .menu-icon:hover,
 .global-header .menu-button:focus,
@@ -1227,14 +1189,35 @@ input[type="checkbox"]:checked ~ .checkbox {
   justify-content: center;
   gap: 20px;
 }
+.hero-section {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/header-background-m.jpg ");
+  background-color: rgba(47, 48, 58, 0.4);
+  width: 100%;
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .hero-section {
-    background-image: url("images/header-background-m.jpg");
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../images/header-background-m.jpg");
   }
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .hero-section {
-    background-image: url("images/header-background-m-2x.jpg");
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../images/header-background-m-2x.jpg");
   }
 }
 
@@ -1307,16 +1290,18 @@ input[type="checkbox"]:checked ~ .checkbox {
     padding-top: 60px;
     justify-content: center;
   }
+
   .hero-section {
     background-image: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.5)
       ),
-      url("../images/header-background-t.jpg");
+      url("../images/header-background-t.jpg ");
     background-color: rgba(47, 48, 58, 0.4);
     width: 100%;
   }
+
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .hero-section {
       background-image: linear-gradient(
@@ -1324,7 +1309,7 @@ input[type="checkbox"]:checked ~ .checkbox {
           rgba(0, 0, 0, 0.3),
           rgba(0, 0, 0, 0.5)
         ),
-        url("/images/header-background-t.jpg");
+        url("../images/header-background-t.jpg");
     }
   }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -1334,7 +1319,7 @@ input[type="checkbox"]:checked ~ .checkbox {
           rgba(0, 0, 0, 0.3),
           rgba(0, 0, 0, 0.5)
         ),
-        url("/images/header-background-t-2x.jpg");
+        url("../images/header-background-t-2x.jpg");
     }
   }
 }
@@ -1552,7 +1537,7 @@ input[type="checkbox"]:checked ~ .checkbox {
     height: 100%;
     flex-shrink: 0;
     justify-content: center;
-    padding-left: auto;
+    padding-left: 215px;
     flex-direction: row;
     padding-bottom: 60px;
   }
@@ -1616,6 +1601,7 @@ input[type="checkbox"]:checked ~ .checkbox {
     background-color: rgba(47, 48, 58, 0.4);
     width: 100%;
   }
+
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .hero-section {
       background-image: linear-gradient(
