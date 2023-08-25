@@ -396,10 +396,13 @@ ul {
   margin-bottom: 200px;
   color: #ffffff;
   border: none;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 30px;
   padding: 10px 20px 10px 19px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   justify-content: center;
+}
+.request-our-service-btn:hover {
+  transform: scale(1.2);
 }
 .first-section ul {
   flex-direction: column;
