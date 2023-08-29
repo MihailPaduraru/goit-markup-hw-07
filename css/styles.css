@@ -297,6 +297,12 @@ ul {
   transition: color var(--transition);
 }
 
+.email-navigation-contacts {
+  display: flex;
+}
+.phone-navigation-contacts {
+  display: flex;
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -1047,13 +1053,9 @@ input[type="checkbox"]:checked ~ .checkbox {
   margin: 0;
 }
 
-.navigation-contacts:hover .email,
-.navigation-contacts:focus .email {
-  color: #2196f3;
-}
-
-.navigation-contacts:hover .navigation-contacts-icon,
-.navigation-contacts:focus .navigation-contacts-icon {
+.navigation-contacts > div:hover .navigation-contacts-icon use,
+.navigation-contacts > div:hover .navigation-contacts-icon-2 use,
+.navigation-contacts > div:hover a {
   color: #2196f3;
 }
 
@@ -1262,11 +1264,20 @@ input[type="checkbox"]:checked ~ .checkbox {
     display: flex;
     justify-content: center;
     box-sizing: content-box;
-    flex-direction: row;
-    align-items: center;
-    row-gap: 40px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
     margin-left: auto;
     width: 100%;
+  }
+  .phone-navigation-contacts {
+    padding-right: 38px;
+  }
+  .email-navigation-contacts {
+    padding-right: 15px;
+  }
+  .email {
+    margin-right: 0;
   }
   .logo-header {
     display: flex;
@@ -1318,6 +1329,16 @@ input[type="checkbox"]:checked ~ .checkbox {
     background-color: rgba(47, 48, 58, 0.4);
     width: 100%;
   }
+  .first-section ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+  }
 
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .hero-section {
@@ -1366,6 +1387,26 @@ input[type="checkbox"]:checked ~ .checkbox {
   .js-menu-container {
     display: none;
   }
+
+  .navigation-contacts {
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-left: auto;
+    width: 100%;
+  }
+  .phone-navigation-contacts {
+    padding-right: 0;
+  }
+  .email-navigation-contacts {
+    padding-right: 0;
+  }
+  .email {
+    margin-right: 40px;
+  }
   .hero-heading {
     color: #fff;
     font-size: 44px;
@@ -1395,6 +1436,7 @@ input[type="checkbox"]:checked ~ .checkbox {
     height: 100%;
     flex-direction: row;
   }
+
   .points-title {
     display: flex;
     text-align: left;
